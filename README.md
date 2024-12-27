@@ -142,7 +142,7 @@ You can only declare a method with a receiver whose type is defined in the same 
 A pointer receiver is required to a method, if the underlying value of the receiver object is to be modified. Else the receiver is just treated as a copy.\
 An _interface_ type is defined as a set of method signatures. A value of interface type can hold any value that implements those methods.\
 A type implements an interface by implementing its methods. There is no explicit declaration of intent, no "implements" keyword.\
-Under the hood, interface values can be thought of as a tuple of a value and a concrete type, which makes sense since it has to "bottom out" somewhere.\
+Under the hood, interface values can be thought of as a tuple of a value and a concrete type, which makes sense since it has to "bottom out" somewhere.
 > Note that an interface value that holds a nil concrete value is itself non-nil. 
 
 Calling a method on a nil interface is a run-time error because there is no type inside the interface tuple to indicate which concrete method to call.\
